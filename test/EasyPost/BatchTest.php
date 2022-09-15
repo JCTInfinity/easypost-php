@@ -155,6 +155,7 @@ class BatchTest extends \PHPUnit\Framework\TestCase
 
         $batch = Batch::create();
 
+        // TODO: Other libs somehow pull out just the ID for the shipments here but pass in the whole object
         $batch->add_shipments([
             'shipments' => [$shipment]
         ]);

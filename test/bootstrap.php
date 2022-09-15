@@ -9,7 +9,8 @@ if (!file_exists('test/cassettes')) {
 
 VCR::configure()->setCassettePath('test/cassettes')
     ->setStorage('yaml')
-    ->setMode('once');
+    ->setMode('once')
+    ->setWhiteList(['vendor/guzzle']);
 
 define('CASSETTE_REPLACEMENT_VALUE', '<REDACTED>');
 define('RESPONSE_BODY_SCRUBBERS', [

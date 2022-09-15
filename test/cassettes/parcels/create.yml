@@ -5,16 +5,18 @@
         url: 'https://api.easypost.com/v2/parcels'
         headers:
             Host: api.easypost.com
+            Expect: ''
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
-        body: '{"parcel":{"length":"10","width":"8","height":"4","weight":"15.4"}}'
+        body: '{"parcel":{"length":10,"width":8,"height":4,"weight":15.4}}'
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '201'
-            message: ''
+            message: Created
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -22,56 +24,56 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: b5225cc262fbd73ae7875583000767ce
+            x-ep-request-uuid: fb9a52bc6323a532e78b0e22001f86b0
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
-            location: /api/v2/parcels.prcl_97f122009fc54885be5f771c9ae03ee2
+            location: /api/v2/parcels.prcl_695e9311b6234441a12a1a77939827d9
             content-type: 'application/json; charset=utf-8'
             content-length: '229'
-            etag: 'W/"de45212bd904d7ab8e9056fafe85ab5d"'
-            x-runtime: '0.087847'
-            x-node: bigweb4nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            etag: 'W/"6a6a1d7d63d2d379e551e4e959e32390"'
+            x-runtime: '0.026362'
+            x-node: bigweb3nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
-            x-proxied: ['intlb1nuq 6aa9972c1e', 'extlb2nuq 9ce216bfac']
+            x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb2nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"prcl_97f122009fc54885be5f771c9ae03ee2","object":"Parcel","created_at":"2022-08-16T17:43:22Z","updated_at":"2022-08-16T17:43:22Z","length":10,"width":8,"height":4,"predefined_package":null,"weight":15.4,"mode":"test"}'
+        body: '{"id":"prcl_695e9311b6234441a12a1a77939827d9","object":"Parcel","created_at":"2022-09-15T22:20:34Z","updated_at":"2022-09-15T22:20:34Z","length":10,"width":8,"height":4,"predefined_package":null,"weight":15.4,"mode":"test"}'
         curl_info:
             url: 'https://api.easypost.com/v2/parcels'
             content_type: 'application/json; charset=utf-8'
             http_code: 201
-            header_size: 792
-            request_size: 303
+            header_size: 801
+            request_size: 364
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.31668
-            namelookup_time: 0.001678
-            connect_time: 0.074875
-            pretransfer_time: 0.154433
-            size_upload: 67.0
+            total_time: 0.213139
+            namelookup_time: 0.006143
+            connect_time: 0.06367
+            pretransfer_time: 0.12825
+            size_upload: 59.0
             size_download: 229.0
-            speed_download: 723.0
-            speed_upload: 211.0
+            speed_download: 1074.0
+            speed_upload: 276.0
             download_content_length: 229.0
-            upload_content_length: 67.0
-            starttransfer_time: 0.154436
+            upload_content_length: 59.0
+            starttransfer_time: 0.213108
             redirect_time: 0.0
             redirect_url: ''
             primary_ip: 169.62.110.130
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51925
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 58206
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 154365
-            connect_time_us: 74875
-            namelookup_time_us: 1678
-            pretransfer_time_us: 154433
+            appconnect_time_us: 128207
+            connect_time_us: 63670
+            namelookup_time_us: 6143
+            pretransfer_time_us: 128250
             redirect_time_us: 0
-            starttransfer_time_us: 154436
-            total_time_us: 316680
+            starttransfer_time_us: 213108
+            total_time_us: 213139

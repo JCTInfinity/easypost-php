@@ -59,6 +59,11 @@ class Batch extends EasypostResource
             $params['batch'] = $clone;
         }
 
+        // Allow for empty batch creation
+        if ($params['batch'] == null) {
+            $params['batch'] = (object)[];
+        }
+
         return self::createResource(get_class(), $params, $apiKey);
     }
 
@@ -88,11 +93,9 @@ class Batch extends EasypostResource
             ];
         }
 
-        $encodedParams = str_replace('\\', '', json_encode($params));
-
         $requestor = new Requestor($apiKey);
         $url = self::classUrl(get_class());
-        list($response, $apiKey) = $requestor->request('post', $url . '/create_and_buy', $encodedParams);
+        list($response, $apiKey) = $requestor->request('post', $url . '/create_and_buy', $params);
 
         return Util::convertToEasyPostObject($response, $apiKey);
     }

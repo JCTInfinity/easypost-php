@@ -5,16 +5,18 @@
         url: 'https://api.easypost.com/v2/batches'
         headers:
             Host: api.easypost.com
+            Expect: ''
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
-        body: '{"batch":{"shipments":[{"to_address":{"name":"Jack Sparrow","street1":"388 Townsend St","street2":"Apt 20","city":"San Francisco","state":"CA","zip":"94107","country":"US","email":"test@example.com","phone":"5555555555"},"from_address":{"name":"Elizabeth Swan","street1":"179 N Harbor Dr","city":"Redondo Beach","state":"CA","zip":"90277","country":"US","email":"test@example.com","phone":"5555555555"},"parcel":{"length":"10","width":"8","height":"4","weight":"15.4"},"service":"First","carrier_accounts":["ca_8dc116debcdb49b5a66a2ddee4612600"],"carrier":"USPS"}]}}'
+        body: '{"batch":{"shipments":[{"to_address":{"name":"Jack Sparrow","street1":"388 Townsend St","street2":"Apt 20","city":"San Francisco","state":"CA","zip":"94107","country":"US","email":"test@example.com","phone":"5555555555"},"from_address":{"name":"Elizabeth Swan","street1":"179 N Harbor Dr","city":"Redondo Beach","state":"CA","zip":"90277","country":"US","email":"test@example.com","phone":"5555555555"},"parcel":{"length":10,"width":8,"height":4,"weight":15.4},"service":"First","carrier_accounts":["ca_8dc116debcdb49b5a66a2ddee4612600"],"carrier":"USPS"}]}}'
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '200'
-            message: ''
+            message: OK
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -22,74 +24,76 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: 9e568e3862fbd6f2e78751020008c6b0
+            x-ep-request-uuid: 00ea67fc63239f1ce78a930500081a5f
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
             content-type: 'application/json; charset=utf-8'
-            content-length: '384'
-            etag: 'W/"ed133a78b942d9cb3b9f5707c322216c"'
-            x-runtime: '0.041318'
-            x-node: bigweb2nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            content-length: '402'
+            etag: 'W/"10772e24bcfe459b5477005ce84a6795"'
+            x-runtime: '0.046638'
+            x-node: bigweb7nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
-            x-proxied: ['intlb1nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
+            x-canary: direct
+            x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"batch_2c6cc5357dd048408decba2c2055d387","object":"Batch","mode":"test","state":"creating","num_shipments":1,"reference":null,"created_at":"2022-08-16T17:42:10Z","updated_at":"2022-08-16T17:42:10Z","scan_form":null,"shipments":[],"status":{"created":0,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":0,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
+        body: '{"id":"batch_bbf5683e376d44c18e71d3a3b9ec01bc","object":"EasyPost::Entity::Batch","mode":"test","state":"creating","num_shipments":1,"reference":null,"created_at":"2022-09-15T21:54:36Z","updated_at":"2022-09-15T21:54:36Z","scan_form":null,"shipments":[],"status":{"created":0,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":0,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
         curl_info:
             url: 'https://api.easypost.com/v2/batches'
             content_type: 'application/json; charset=utf-8'
             http_code: 200
-            header_size: 727
-            request_size: 304
+            header_size: 749
+            request_size: 864
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.281184
-            namelookup_time: 0.002102
-            connect_time: 0.074682
-            pretransfer_time: 0.165979
-            size_upload: 566.0
-            size_download: 384.0
-            speed_download: 1365.0
-            speed_upload: 2012.0
-            download_content_length: 384.0
-            upload_content_length: 566.0
-            starttransfer_time: 0.165984
+            total_time: 0.234512
+            namelookup_time: 0.002006
+            connect_time: 0.059842
+            pretransfer_time: 0.129082
+            size_upload: 558.0
+            size_download: 402.0
+            speed_download: 1714.0
+            speed_upload: 2379.0
+            download_content_length: 402.0
+            upload_content_length: 558.0
+            starttransfer_time: 0.234432
             redirect_time: 0.0
             redirect_url: ''
             primary_ip: 169.62.110.131
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51807
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 57624
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 165759
-            connect_time_us: 74682
-            namelookup_time_us: 2102
-            pretransfer_time_us: 165979
+            appconnect_time_us: 129045
+            connect_time_us: 59842
+            namelookup_time_us: 2006
+            pretransfer_time_us: 129082
             redirect_time_us: 0
-            starttransfer_time_us: 165984
-            total_time_us: 281184
+            starttransfer_time_us: 234432
+            total_time_us: 234512
 -
     request:
         method: POST
-        url: 'https://api.easypost.com/v2/batches/batch_2c6cc5357dd048408decba2c2055d387/buy'
+        url: 'https://api.easypost.com/v2/batches/batch_bbf5683e376d44c18e71d3a3b9ec01bc/buy'
         headers:
             Host: api.easypost.com
+            Content-Length: '0'
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
-        body: '[]'
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '200'
-            message: ''
+            message: OK
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -97,74 +101,75 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: 9e568e3862fbd6f2e78751030008c6c2
+            x-ep-request-uuid: 00ea67fd63239f1ce78a930600081a6f
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
             content-type: 'application/json; charset=utf-8'
             content-length: '524'
-            etag: 'W/"76230c2b51e12b8f61060c7d8cdf7770"'
-            x-runtime: '0.049186'
-            x-node: bigweb4nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            etag: 'W/"ac8876e785156019570419e0db0d544b"'
+            x-runtime: '0.058453'
+            x-node: bigweb3nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
             x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"batch_2c6cc5357dd048408decba2c2055d387","object":"Batch","mode":"test","state":"created","num_shipments":1,"reference":null,"created_at":"2022-08-16T17:42:10Z","updated_at":"2022-08-16T17:42:10Z","scan_form":null,"shipments":[{"batch_status":"queued_for_purchase","batch_message":null,"reference":null,"tracking_code":null,"id":"shp_b9a0be31936e46e881f1db7c8563753f"}],"status":{"created":1,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":0,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
+        body: '{"id":"batch_bbf5683e376d44c18e71d3a3b9ec01bc","object":"Batch","mode":"test","state":"created","num_shipments":1,"reference":null,"created_at":"2022-09-15T21:54:36Z","updated_at":"2022-09-15T21:54:36Z","scan_form":null,"shipments":[{"batch_status":"queued_for_purchase","batch_message":null,"reference":null,"tracking_code":null,"id":"shp_d83c373488284f1ab4ebd606daffd47b"}],"status":{"created":1,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":0,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
         curl_info:
-            url: 'https://api.easypost.com/v2/batches/batch_2c6cc5357dd048408decba2c2055d387/buy'
+            url: 'https://api.easypost.com/v2/batches/batch_bbf5683e376d44c18e71d3a3b9ec01bc/buy'
             content_type: 'application/json; charset=utf-8'
             http_code: 200
-            header_size: 727
-            request_size: 345
+            header_size: 731
+            request_size: 347
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.287373
-            namelookup_time: 0.013769
-            connect_time: 0.086274
-            pretransfer_time: 0.164539
-            size_upload: 2.0
+            total_time: 0.253078
+            namelookup_time: 0.001787
+            connect_time: 0.059944
+            pretransfer_time: 0.134545
+            size_upload: 0.0
             size_download: 524.0
-            speed_download: 1823.0
-            speed_upload: 6.0
+            speed_download: 2070.0
+            speed_upload: 0.0
             download_content_length: 524.0
-            upload_content_length: 2.0
-            starttransfer_time: 0.164544
+            upload_content_length: 0.0
+            starttransfer_time: 0.253049
             redirect_time: 0.0
             redirect_url: ''
             primary_ip: 169.62.110.131
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51808
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 57625
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 164483
-            connect_time_us: 86274
-            namelookup_time_us: 13769
-            pretransfer_time_us: 164539
+            appconnect_time_us: 134515
+            connect_time_us: 59944
+            namelookup_time_us: 1787
+            pretransfer_time_us: 134545
             redirect_time_us: 0
-            starttransfer_time_us: 164544
-            total_time_us: 287373
+            starttransfer_time_us: 253049
+            total_time_us: 253078
 -
     request:
         method: POST
-        url: 'https://api.easypost.com/v2/batches/batch_2c6cc5357dd048408decba2c2055d387/scan_form'
+        url: 'https://api.easypost.com/v2/batches/batch_bbf5683e376d44c18e71d3a3b9ec01bc/scan_form'
         headers:
             Host: api.easypost.com
+            Content-Length: '0'
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
-        body: '[]'
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '200'
-            message: ''
+            message: OK
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -172,55 +177,55 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: 9e568e3e62fbd6f7e78751230008c934
+            x-ep-request-uuid: 00ea680263239f22e78a930700081b97
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
             content-type: 'application/json; charset=utf-8'
             content-length: '856'
-            etag: 'W/"7125969c0522b5691f101f08518c78db"'
-            x-runtime: '0.107024'
-            x-node: bigweb2nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            etag: 'W/"22545e69813072a2a930faace91d91c6"'
+            x-runtime: '0.081892'
+            x-node: bigweb4nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
             x-proxied: ['intlb1nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"batch_2c6cc5357dd048408decba2c2055d387","object":"Batch","mode":"test","state":"purchased","num_shipments":1,"reference":null,"created_at":"2022-08-16T17:42:10Z","updated_at":"2022-08-16T17:42:16Z","scan_form":{"id":"sf_09095ec959c945b0a58fb5540538602d","object":"ScanForm","created_at":"2022-08-16T17:42:16Z","updated_at":"2022-08-16T17:42:16Z","tracking_codes":[],"address":null,"status":"creating","message":null,"form_url":null,"form_file_type":null,"batch_id":"batch_2c6cc5357dd048408decba2c2055d387","confirmation":null},"shipments":[{"batch_status":"postage_purchased","batch_message":null,"reference":null,"tracking_code":"9400100109361133346486","id":"shp_b9a0be31936e46e881f1db7c8563753f"}],"status":{"created":0,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":1,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
+        body: '{"id":"batch_bbf5683e376d44c18e71d3a3b9ec01bc","object":"Batch","mode":"test","state":"purchased","num_shipments":1,"reference":null,"created_at":"2022-09-15T21:54:36Z","updated_at":"2022-09-15T21:54:42Z","scan_form":{"id":"sf_361a768becbc4ceba482bee743cae576","object":"ScanForm","created_at":"2022-09-15T21:54:42Z","updated_at":"2022-09-15T21:54:42Z","tracking_codes":[],"address":null,"status":"creating","message":null,"form_url":null,"form_file_type":null,"batch_id":"batch_bbf5683e376d44c18e71d3a3b9ec01bc","confirmation":null},"shipments":[{"batch_status":"postage_purchased","batch_message":null,"reference":null,"tracking_code":"9400100109361137713048","id":"shp_d83c373488284f1ab4ebd606daffd47b"}],"status":{"created":0,"queued_for_purchase":0,"creation_failed":0,"postage_purchased":1,"postage_purchase_failed":0},"pickup":null,"label_url":null}'
         curl_info:
-            url: 'https://api.easypost.com/v2/batches/batch_2c6cc5357dd048408decba2c2055d387/scan_form'
+            url: 'https://api.easypost.com/v2/batches/batch_bbf5683e376d44c18e71d3a3b9ec01bc/scan_form'
             content_type: 'application/json; charset=utf-8'
             http_code: 200
-            header_size: 727
-            request_size: 351
+            header_size: 731
+            request_size: 353
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.361689
-            namelookup_time: 0.002358
-            connect_time: 0.078648
-            pretransfer_time: 0.175279
-            size_upload: 2.0
+            total_time: 0.268896
+            namelookup_time: 0.001646
+            connect_time: 0.060603
+            pretransfer_time: 0.127208
+            size_upload: 0.0
             size_download: 856.0
-            speed_download: 2366.0
-            speed_upload: 5.0
+            speed_download: 3183.0
+            speed_upload: 0.0
             download_content_length: 856.0
-            upload_content_length: 2.0
-            starttransfer_time: 0.175294
+            upload_content_length: 0.0
+            starttransfer_time: 0.268788
             redirect_time: 0.0
             redirect_url: ''
             primary_ip: 169.62.110.131
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51817
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 57626
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 175068
-            connect_time_us: 78648
-            namelookup_time_us: 2358
-            pretransfer_time_us: 175279
+            appconnect_time_us: 127177
+            connect_time_us: 60603
+            namelookup_time_us: 1646
+            pretransfer_time_us: 127208
             redirect_time_us: 0
-            starttransfer_time_us: 175294
-            total_time_us: 361689
+            starttransfer_time_us: 268788
+            total_time_us: 268896

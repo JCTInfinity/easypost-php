@@ -40,6 +40,7 @@ class PickupTest extends \PHPUnit\Framework\TestCase
         $shipment = Shipment::create(Fixture::oneCallBuyShipment());
 
         $pickupData = Fixture::basicPickup();
+        // TODO: Other libs somehow pull out just the ID for the shipments here but pass in the whole object
         $pickupData['shipment'] = $shipment;
 
         $pickup = Pickup::create($pickupData);

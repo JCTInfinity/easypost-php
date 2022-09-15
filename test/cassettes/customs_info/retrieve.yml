@@ -5,16 +5,18 @@
         url: 'https://api.easypost.com/v2/customs_infos'
         headers:
             Host: api.easypost.com
+            Expect: ''
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
-        body: '{"customs_info":{"eel_pfc":"NOEEI 30.37(a)","customs_certify":"true","customs_signer":"Steve Brule","contents_type":"merchandise","restriction_type":"none","non_delivery_option":"return","customs_items":[{"description":"Sweet shirts","quantity":"2","weight":"11","value":"23.25","hs_tariff_number":"654321","origin_country":"US"}]}}'
+        body: '{"customs_info":{"eel_pfc":"NOEEI 30.37(a)","customs_certify":true,"customs_signer":"Steve Brule","contents_type":"merchandise","contents_explanation":"","restriction_type":"none","non_delivery_option":"return","customs_items":[{"description":"Sweet shirts","quantity":2,"weight":11,"value":23.25,"hs_tariff_number":"654321","origin_country":"US"}]}}'
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '201'
-            message: ''
+            message: Created
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -22,74 +24,75 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: 9e568e3a62fbd746e78755c60008e451
+            x-ep-request-uuid: fb9a52c06323a501e78b0aa9001f6f28
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
-            location: /api/v2/customs_infos/cstinfo_f5c0c03e9d3c4b0b91bf21247034a215
+            location: /api/v2/customs_infos/cstinfo_59b0747c1c4e4221ab6a2b04a50eefca
             content-type: 'application/json; charset=utf-8'
-            content-length: '796'
-            etag: 'W/"215556efb8b33a0c0ce678512b9d4e4e"'
-            x-runtime: '0.040042'
-            x-node: bigweb3nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            content-length: '794'
+            etag: 'W/"88572403f7a839e981a3ed087603f8d5"'
+            x-runtime: '0.031200'
+            x-node: bigweb6nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
-            x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
+            x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb2nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"cstinfo_f5c0c03e9d3c4b0b91bf21247034a215","object":"CustomsInfo","created_at":"2022-08-16T17:43:34Z","updated_at":"2022-08-16T17:43:34Z","contents_explanation":null,"contents_type":"merchandise","customs_certify":true,"customs_signer":"Steve Brule","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"return","restriction_comments":null,"restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_e19decca03f54980b0c177d406cf09c3","object":"CustomsItem","created_at":"2022-08-16T17:43:34Z","updated_at":"2022-08-16T17:43:34Z","description":"Sweet shirts","hs_tariff_number":"654321","origin_country":"US","quantity":2,"value":"23.25","weight":11,"code":null,"mode":"test","manufacturer":null,"currency":null,"eccn":null,"printed_commodity_identifier":null}]}'
+        body: '{"id":"cstinfo_59b0747c1c4e4221ab6a2b04a50eefca","object":"CustomsInfo","created_at":"2022-09-15T22:19:45Z","updated_at":"2022-09-15T22:19:45Z","contents_explanation":"","contents_type":"merchandise","customs_certify":true,"customs_signer":"Steve Brule","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"return","restriction_comments":null,"restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_fc800a08e8c74efca4820b29eea6a170","object":"CustomsItem","created_at":"2022-09-15T22:19:45Z","updated_at":"2022-09-15T22:19:45Z","description":"Sweet shirts","hs_tariff_number":"654321","origin_country":"US","quantity":2,"value":"23.25","weight":11,"code":null,"mode":"test","manufacturer":null,"currency":null,"eccn":null,"printed_commodity_identifier":null}]}'
         curl_info:
             url: 'https://api.easypost.com/v2/customs_infos'
             content_type: 'application/json; charset=utf-8'
             http_code: 201
-            header_size: 801
-            request_size: 310
+            header_size: 810
+            request_size: 662
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.282835
-            namelookup_time: 0.002535
-            connect_time: 0.078744
-            pretransfer_time: 0.166931
-            size_upload: 332.0
-            size_download: 796.0
-            speed_download: 2814.0
-            speed_upload: 1173.0
-            download_content_length: 796.0
-            upload_content_length: 332.0
-            starttransfer_time: 0.166935
+            total_time: 0.218761
+            namelookup_time: 0.001901
+            connect_time: 0.058794
+            pretransfer_time: 0.128884
+            size_upload: 350.0
+            size_download: 794.0
+            speed_download: 3629.0
+            speed_upload: 1599.0
+            download_content_length: 794.0
+            upload_content_length: 350.0
+            starttransfer_time: 0.218732
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 169.62.110.131
+            primary_ip: 169.62.110.130
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51946
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 58168
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 166853
-            connect_time_us: 78744
-            namelookup_time_us: 2535
-            pretransfer_time_us: 166931
+            appconnect_time_us: 128827
+            connect_time_us: 58794
+            namelookup_time_us: 1901
+            pretransfer_time_us: 128884
             redirect_time_us: 0
-            starttransfer_time_us: 166935
-            total_time_us: 282835
+            starttransfer_time_us: 218732
+            total_time_us: 218761
 -
     request:
         method: GET
-        url: 'https://api.easypost.com/v2/customs_infos/cstinfo_f5c0c03e9d3c4b0b91bf21247034a215'
+        url: 'https://api.easypost.com/v2/customs_infos/cstinfo_59b0747c1c4e4221ab6a2b04a50eefca'
         headers:
             Host: api.easypost.com
+            Accept-Encoding: ''
             Accept: application/json
             Authorization: ''
             Content-Type: application/json
             User-Agent: ''
     response:
         status:
-            http_version: '2'
+            http_version: '1.1'
             code: '200'
-            message: ''
+            message: OK
         headers:
             x-frame-options: SAMEORIGIN
             x-xss-protection: '1; mode=block'
@@ -97,55 +100,55 @@
             x-download-options: noopen
             x-permitted-cross-domain-policies: none
             referrer-policy: strict-origin-when-cross-origin
-            x-ep-request-uuid: 9e568e3862fbd746e78755c70008e46d
+            x-ep-request-uuid: fb9a52c06323a501e78b0aaa001f6f4c
             cache-control: 'private, no-cache, no-store'
             pragma: no-cache
             expires: '0'
             content-type: 'application/json; charset=utf-8'
-            content-length: '796'
-            etag: 'W/"215556efb8b33a0c0ce678512b9d4e4e"'
-            x-runtime: '0.022242'
-            x-node: bigweb5nuq
-            x-version-label: easypost-202208152354-15cac62d1c-master
+            content-length: '794'
+            etag: 'W/"88572403f7a839e981a3ed087603f8d5"'
+            x-runtime: '0.021814'
+            x-node: bigweb8nuq
+            x-version-label: easypost-202209151807-6075a793a4-master
             x-backend: easypost
-            x-proxied: ['intlb1nuq 6aa9972c1e', 'extlb1nuq 9ce216bfac']
+            x-proxied: ['intlb2nuq 6aa9972c1e', 'extlb2nuq 9ce216bfac']
             strict-transport-security: 'max-age=31536000; includeSubDomains; preload'
-        body: '{"id":"cstinfo_f5c0c03e9d3c4b0b91bf21247034a215","object":"CustomsInfo","created_at":"2022-08-16T17:43:34Z","updated_at":"2022-08-16T17:43:34Z","contents_explanation":null,"contents_type":"merchandise","customs_certify":true,"customs_signer":"Steve Brule","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"return","restriction_comments":null,"restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_e19decca03f54980b0c177d406cf09c3","object":"CustomsItem","created_at":"2022-08-16T17:43:34Z","updated_at":"2022-08-16T17:43:34Z","description":"Sweet shirts","hs_tariff_number":"654321","origin_country":"US","quantity":2,"value":"23.25","weight":11,"code":null,"mode":"test","manufacturer":null,"currency":null,"eccn":null,"printed_commodity_identifier":null}]}'
+        body: '{"id":"cstinfo_59b0747c1c4e4221ab6a2b04a50eefca","object":"CustomsInfo","created_at":"2022-09-15T22:19:45Z","updated_at":"2022-09-15T22:19:45Z","contents_explanation":"","contents_type":"merchandise","customs_certify":true,"customs_signer":"Steve Brule","eel_pfc":"NOEEI 30.37(a)","non_delivery_option":"return","restriction_comments":null,"restriction_type":"none","mode":"test","declaration":null,"customs_items":[{"id":"cstitem_fc800a08e8c74efca4820b29eea6a170","object":"CustomsItem","created_at":"2022-09-15T22:19:45Z","updated_at":"2022-09-15T22:19:45Z","description":"Sweet shirts","hs_tariff_number":"654321","origin_country":"US","quantity":2,"value":"23.25","weight":11,"code":null,"mode":"test","manufacturer":null,"currency":null,"eccn":null,"printed_commodity_identifier":null}]}'
         curl_info:
-            url: 'https://api.easypost.com/v2/customs_infos/cstinfo_f5c0c03e9d3c4b0b91bf21247034a215'
+            url: 'https://api.easypost.com/v2/customs_infos/cstinfo_59b0747c1c4e4221ab6a2b04a50eefca'
             content_type: 'application/json; charset=utf-8'
             http_code: 200
-            header_size: 727
-            request_size: 329
+            header_size: 731
+            request_size: 331
             filetime: -1
             ssl_verify_result: 0
             redirect_count: 0
-            total_time: 0.256904
-            namelookup_time: 0.00319
-            connect_time: 0.077504
-            pretransfer_time: 0.158629
+            total_time: 0.203813
+            namelookup_time: 0.001688
+            connect_time: 0.058798
+            pretransfer_time: 0.123012
             size_upload: 0.0
-            size_download: 796.0
-            speed_download: 3098.0
+            size_download: 794.0
+            speed_download: 3895.0
             speed_upload: 0.0
-            download_content_length: 796.0
+            download_content_length: 794.0
             upload_content_length: 0.0
-            starttransfer_time: 0.256801
+            starttransfer_time: 0.203788
             redirect_time: 0.0
             redirect_url: ''
-            primary_ip: 169.62.110.131
+            primary_ip: 169.62.110.130
             certinfo: {  }
             primary_port: 443
-            local_ip: 10.130.6.17
-            local_port: 51947
-            http_version: 3
+            local_ip: 10.130.6.16
+            local_port: 58169
+            http_version: 2
             protocol: 2
             ssl_verifyresult: 0
             scheme: HTTPS
-            appconnect_time_us: 158565
-            connect_time_us: 77504
-            namelookup_time_us: 3190
-            pretransfer_time_us: 158629
+            appconnect_time_us: 122987
+            connect_time_us: 58798
+            namelookup_time_us: 1688
+            pretransfer_time_us: 123012
             redirect_time_us: 0
-            starttransfer_time_us: 256801
-            total_time_us: 256904
+            starttransfer_time_us: 203788
+            total_time_us: 203813
