@@ -104,7 +104,7 @@ class User extends EasypostResource
      */
     public function api_keys($apiKey = null)
     {
-        $apiKeys = self::all_api_keys();
+        $apiKeys = self::all_api_keys($apiKey);
         $myApiKeys = null;
 
         if ($apiKeys->id == $this->id) {
